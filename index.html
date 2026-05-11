@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pish Tester Pro | 🛡️</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="lang-nav">
+  <button class="lang-btn active" id="btn-en" onclick="setLanguage('en')">EN</button>
+  <button class="lang-btn" id="btn-am" onclick="setLanguage('am')">አማ</button>
+  <button class="lang-btn" id="btn-om" onclick="setLanguage('om')">ORM</button>
+</div>
+
+<div class="glass-container">
+  <header class="safety-header">
+    <div class="shield-glow">🛡️</div>
+    <h1 id="ui-title">Breathe. You're safe now.</h1>
+    <p id="ui-subtitle">Let's check that message together. Our AI is scanning for tricks.</p>
+  </header>
+
+  <div class="mode-toggle">
+    <button id="toggleStudy" onclick="toggleMode()">🎓 Take Full Course</button>
+  </div>
+
+  <main id="scannerSection" class="input-area">
+    <textarea id="userInput" placeholder="Paste message here..."></textarea>
+    <button id="analyzeBtn">Scan for Security</button>
+    <div id="resultContainer" class="hidden">
+      <div class="result-card">
+        <h3 id="ui-result-title">🛡️ Analysis:</h3>
+        <div id="aiResponse"></div>
+      </div>
+    </div>
+  </main>
+
+  <section id="studySection" class="hidden">
+    <div class="course-slide">
+      <h2 id="course-title">Spotting Attacks</h2>
+      <div class="progress-bar"><div class="progress" id="ui-progress"></div></div>
+      <div id="course-content" class="course-text"></div>
+      <div class="course-nav">
+        <button class="nav-btn" onclick="prevLesson()">←</button>
+        <button class="nav-btn primary-btn" onclick="nextLesson()">→</button>
+      </div>
+    </div>
+  </section>
+  
+  <section class="static-info">
+    <h3 id="ui-guide-title">How to Spot a Scam</h3>
+    <p id="ui-guide-text">Scam links use fear or greed. Check URLs for errors.</p>
+  </section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
